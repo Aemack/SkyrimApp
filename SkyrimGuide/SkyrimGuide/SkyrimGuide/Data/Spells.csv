@@ -1,0 +1,156 @@
+Ironflesh,Alteration,(1) - Novice,341,Improves caster's armor by 80 points for 60 seconds,"Purchase at CW, MK after reaching level 50 Alteration",000A26E4,
+Magelight,Alteration,(1) - Novice,87,Stick a 60-second ball of light where it strikes when cast,"Purchase at CW, MK after reaching level 25 Alteration",000A26E2,
+Paralyze,Alteration,(1) - Novice,685,Targets that fail to resist are paralyzed for 10 sec,Purchase at CW after reaching level 70 Alteration,000A26E8,
+Transmute Mineral Ore,Alteration,(1) - Novice,200,Transmute one piece of unrefined Iron Ore to Silver Ore or Silver Ore to Gold Ore,"Purchase at CW after reaching level 50 Alteration
+
+Found in Ansilvund Burial Chambers, Halted Stream Camp",109112,
+Ash Rune (DB),Alteration,(2) - Apprentice,635,(DB) Targets that fail to resist are immobilized in hardened ash for 30 seconds,,,
+Ebonyflesh,Alteration,(2) - Apprentice,650,Improves caster's armor by 100 points for 60 seconds,Purchase at CW after reaching level 70 Alteration,000A26E9,
+Oakflesh,Alteration,(2) - Apprentice,44,Improves caster's armor by 40 points for 60 seconds,"Purchase at UK, FH, DR,WH, FH, RT, BP, CW, PK,MK",0009E2A8,
+Candlelight,Alteration,(3) - Adept,44,Create hovering light that lasts 60 seconds,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK
+
+Found in Fort Snowhawk",0009E2A7,
+Detect Life,Alteration,(3) - Adept,332,See nearby living through walls,"Purchase at CW, MK
+
+Reward for Infiltrationquest",000A26E7,
+Equilibrium,Alteration,(3) - Adept,250,Convert 20/s Health into 20/s Magicka,"Not available for purchase
+
+Found in Labyrinthian Chasm",000F4997,
+Stoneflesh,Alteration,(3) - Adept,95,Improves caster's armor by 60 points for 60 seconds,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK",000A26E3,
+Waterbreathing,Alteration,(3) - Adept,340,Breathe under water for 60 seconds,"Purchase at CW, MK after reaching level 50 Alteration",000A26E6,
+Ash Shell (DB),Alteration,(4) - Expert,425,"(DB) Cast on a nearby surface, it explodes when enemies are nearby, immobilizing them in hardened ash for 30 seconds",,,
+Telekinesis,Alteration,(4) - Expert,326,Target item and hover it nearer or cast it away,"Purchase at CW, MK",000A26E5,
+Detect Dead,Alteration,(5) - Master,600,See nearby dead through walls,Purchase at CW after reaching level 70 Alteration,000A26EA,
+Dragonhide,Alteration,(5) - Master,1389,Caster ignores 80% of physical damage for 30 seconds,Reward for Alteration Ritual Spell quest (Level 90 Alteration),000D2B4E,
+Mass Paralysis,Alteration,(5) - Master,1280,All targets in the area that fail to resist are paralyzed for 15 sec,Purchase at CW afterAlteration Ritual Spell(Level 90 Alteration),000DD646,
+Bound Sword,Conjuration,(1) - Novice,49,Creates magic sword for 120 seconds,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK
+
+Find in Fort Greymoor",0009E2A9,
+Conjure Flame Atronach,Conjuration,(1) - Novice,"99
+(30 at CW)",Summons a flame atronach for 60 seconds where the caster is pointing,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK
+
+Find in Korvanjund CryptCraft at Atronach Forge",000A26EC,
+Dread Zombie,Conjuration,(1) - Novice,630,Reanimate a very powerful dead body to fight for you for 60 sec,Purchase at CW,000A26F7,
+Bound Bow,Conjuration,(2) - Apprentice,335,Creates a magic bow for 120 seconds,"Purchase at UK, FH, CW",000A26F1,
+Command Daedra,Conjuration,(2) - Apprentice,660,Powerful summoned & raised creatures are put under your control,"Not available for purchase
+
+Reward for Conjuration Ritual Spell quest",000A26F6,
+Flame Thrall,Conjuration,(2) - Apprentice,1260,Summons a Flame Atronach permanently,Purchase at CW afterConjuration Ritual Spellquest(must be level 90 Conjuration),000A26FA,
+Flaming Familiar,Conjuration,(2) - Apprentice,250,Summons flaming familiar that attacks then explodes causing flame damage,"Not available for purchase
+
+Reward for A Scroll For Anska quest",000B45F7,
+Frost Thrall,Conjuration,(2) - Apprentice,3374,Summons a Frost Atronach permanently,Purchase at CW afterConjuration Ritual Spellquest,000A26FB,
+Revenant,Conjuration,(2) - Apprentice,340,Reanimate a powerful dead body to fight for 60 seconds,"Purchase at UK, FH, CW",000A26F2,
+Bound Battleaxe,Conjuration,(3) - Adept,99,Creates a magic battleaxe for 120 seconds,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK",000A26ED,
+Conjure Ash Guardian (DB),Conjuration,(3) - Adept,1120,"Creates an Ash Guardian that guards that location until destroyed. Consumes a heart stone from your inventory, without which it will be hostile.",Purchase at Tel Mithrynfrom Talvas Fathryon (new to The Elder Scrolls V: Dragonborn),0301AABA,
+Conjure Ash Spawn (DB),Conjuration,(3) - Adept,338,(DB) Summons an Ash Spawn for 60 seconds wherever the caster is pointing,,,
+Conjure Boneman (DG),Conjuration,(3) - Adept,75,(DG) Summons a Boneman Archer from the Soul Cairn for 60 seconds wherever the caster is pointing,,,
+Conjure Seeker (DB),Conjuration,(3) - Adept,307,(DB) Summons a Seeker for 60 seconds wherever the caster is pointing,,,
+Reanimate Corpse,Conjuration,(3) - Adept,99,Reanimate a more powerful dead body to fight for 60 seconds,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK",000A26EB,
+Soul Trap,Conjuration,(3) - Adept,100,Fills a soul gem if target dies within 60 seconds of casting,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK
+
+Craft at Atronach Forge",0009CD54,
+Arvak (DG),Conjuration,(4) - Expert,N/A,(DG) Summons Arvak in the Soul Cairn or Tamriel wilderness to act as your steed,,,
+Banish Daedra,Conjuration,(4) - Expert,346,Returns weaker daedra to Oblivion,"Purchase at UK, FH, CW
+
+Find in Fort Amol Prison",000A26EE,
+Bound Dagger (DB),Conjuration,(4) - Expert,38,(DB) Creates a magic dagger for 120 seconds. Sheathe it to dispel,,,
+Conjure Dremora Lord,Conjuration,(4) - Expert,730,Summons a Dremora Lord to fight for you for 120 seconds,Purchase at CW,0010FD60,
+Conjure Familiar,Conjuration,(4) - Expert,49,Summons a familiar for 60 seconds where the caster is pointing,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK",0009E2AB,
+Conjure Mistman (DG),Conjuration,(4) - Expert,75,(DG) Summons a Mistman from the Soul Cairn for 60 seconds wherever the caster is pointing,,,
+Conjure Wrathman (DG),Conjuration,(4) - Expert,75,(DG) Summons a Wrathman from the Soul Cairn for 60 seconds wherever the caster is pointing,,,
+Dead Thrall,Conjuration,(4) - Expert,3296,Reanimate a dead person permanently to fight for you,Purchase at CW afterConjuration Ritual Spellquest,000A26F9,
+Expel Daedra,Conjuration,(4) - Expert,620,Powerful summoned daedra creatures are sent back to Oblivion,"Purchase at CW
+(must be level 70 Conjuration)",000A26F8,
+Conjure Frost Atronach,Conjuration,(5) - Master,347,Summons a frost atronach for 60 seconds where the caster is pointing,"Purchase at UK, FH, CW
+
+Craft at Atronach Forge",000A26EF,
+Conjure Storm Atronach,Conjuration,(5) - Master,690,Summons a storm atronach for 60 seconds where the caster is pointing,"Purchase at CW
+
+Craft at Atronach Forge",000A26f0,
+Raise Zombie,Conjuration,(5) - Master,49,Reanimate a weak dead body to fight for 60 seconds,"Purchase at UK, FH, DR,WH, FH, RT, BP, CW, PK,MK
+
+Find in Fellglow KeepDungeons, Fort Snowhawk, Halidir's Cairn",0009E2AA,
+Storm Thrall,Conjuration,(5) - Master,3504,Summons a Storm Atronach permanently,Purchase at CW afterConjuration Ritual Spellquest,000A26FC,
+Blizzard,Destruction,(1) - Novice,1350,Targets take 20 frost damage + Stamina damage for 10 seconds,Purchase at CW afterDestruction Ritual Spellquest,000A270D,
+Flames,Destruction,(1) - Novice,50,Shoot flames from one or both hands for 8/s fire damage; targets on fire take extra damage,"Purchase at UK, FH, DR,WH, FH, CW, PK, MK
+
+Find in Labyrinthian Chasm, Forelhost Refectory, Hag's End,Mzulft Aedrome",0009CD51,
+Frost Cloak,Destruction,(1) - Novice,340,"For 60 seconds, opponents in melee range take 8/s frost damage and stamina damage","Purchase at DR, WH, CW,PK",000A2704,
+Lightning Bolt,Destruction,(1) - Novice,95,Create a bolt of lightning that does 25 points of shock damage to health and half that to magicka,"Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A26FF,
+Whirlwind Cloak (DB),Destruction,(1) - Novice,395,"(DB) For 60 seconds, opponents in melee range have a chance of being flung away",,,
+Firebolt,Destruction,(2) - Apprentice,96,A blast of fire that does 25 points of damage; targets on fire take extra damage,"Purchase at DR, WH, CW,PK",000A26FD,
+Lightning Cloak,Destruction,(2) - Apprentice,355,For 60 seconds nearby opponents take 8 points shock damage and half magicka damage,"Purchase at DR, WH, CW,PK",000A2705,
+Lightning Storm,Destruction,(2) - Apprentice,1400,Target takes 75/s shock damage to Health and 75/2s damage to Magicka,Purchase at CW afterDestruction Ritual Spellquest,000A270E,
+Chain Lightning,Destruction,(3) - Adept,390,"Lightning bolt that shock damages health magicka, then leaps to another target","Purchase at DR, WH, CW,PK",000A2708,
+Fire Rune,Destruction,(3) - Adept,90,"Cast on a nearby surface, it explodes for 50 points of fire damage when enemies come near","Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A2700,
+Fire Storm,Destruction,(3) - Adept,1290,When cast it explodes for 150 points of fire damage to nearby enemies,Reward for Destruction Ritual Spell quest,000A270C,
+Fireball,Destruction,(3) - Adept,345,A fiery explosion for 50 points of damage in 15 foot radius; targets on fire take extra damage,"Purchase at DR, WH, CW,PK",000A2706,
+Frostbite,Destruction,(3) - Adept,47,A blast of cold that does 8/s per second to health and stamina,"Purchase at UK, FH, DR,WH, FH, RT, BP, CW, PK,MK
+
+Find in Labyrinthian Thoroughfare, Mzulft Aedrome, Serpent's Bluff Ruins",0009CD52,
+Icy Spear,Destruction,(3) - Adept,725,Throw spear of ice that does 60 points of frost damage to health and stamina,Purchase at CW,0010F7F3,
+Incinerate,Destruction,(3) - Adept,710,Create blast of fire that does 60 points of damage; targets on fire take extra damage,Purchase at CW,0010F7F4,
+Sparks,Destruction,(3) - Adept,46,Create a bolt of lightning that does 10/s shock damage to health and 5/s to magicka,"Purchase at UK, FH, DR,WH, BP, CW, PK, MK",0009CD53,
+Wall of Storms,Destruction,(3) - Adept,725,"Sprayed on the ground, creates wall of lightning that does 50/s shock damage",Purchase at CW,000A270B,
+Frost Rune,Destruction,(4) - Expert,92,"Cast on a nearby surface, it explodes for 50 points of frost damage when enemies come near","Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A2701,
+Thunderbolt,Destruction,(4) - Expert,750,Create a thunderbolt that does 60 points of shock damage to health and half that to magicka,Purchase at CW,0010F7F5,
+Wall of Flames,Destruction,(4) - Expert,680,"Sprayed on the ground, creates wall of flames that does 50/s fire damage","Purchase at CW
+
+Find in Skuldafn",000A2709,
+Wall of Frost,Destruction,(4) - Expert,700,"Sprayed on the ground, creates wall of frost that does 50/s frost damage",Purchase at CW,000A270A,
+Flame Cloak,Destruction,(5) - Master,325,"For 60 seconds, opponents in melee range take 8/s fire damage; targets on fire take extra damage","Purchase at DR, WH, CW,PK----Find by charred body (likely one of the missing apprentices) east of CW",000A2703,
+Ice Spike,Destruction,(5) - Master,96,Throw a spike of ice that does 25 points of frost damage to health and stamina,"Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A26FE,
+Ice Storm,Destruction,(5) - Master,360,Create a freezing whirlwind that does 40/s frost damage to health and stamina,"Purchase at DR, WH, CW,PK",000A2707,
+Lightning Rune,Destruction,(5) - Master,93,"Cast on a nearby surface, explodes for 50 points of shock damage when enemies come near","Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A2702,
+Hysteria,Illusion,(1) - Novice,1240,Creatures and people up to level 25 flee from combat for 60 seconds,Reward for Illusion Ritual Spell quest,000A271C,
+Pacify,Illusion,(1) - Novice,610,Creatures and people up to level 20 won't fight for 60 seconds,Purchase at CW,000A2717,
+Call to Arms,Illusion,(2) - Apprentice,1150,Improves target combat skills for 10 minutes,Purchase at CW afterIllusion Ritual Spell quest,000A271B,
+Clairvoyance,Illusion,(2) - Apprentice,50,Shows the path to the current goal,"Purchase at UK, FH, DR,WH, FH, RT, BP, CW, PK,MK
+
+Find in Embershard Mine",000FF7D1,
+Fear,Illusion,(2) - Apprentice,80,Creatures and people up to level 9 flee from combat for 30 seconds,"Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A2712,
+Fury,Illusion,(2) - Apprentice,43,Creatures and people up to level 6 will attack anything nearby for 30 seconds,"Purchase at UK, FH, DR,WH, FH, RT, BP, CW, PK,MK",0009E2AC,
+Harmony,Illusion,(2) - Apprentice,1220,Creatures and people up to level 25 nearby won't fight for 60 seconds,Purchase at CW afterIllusion Ritual Spell quest,000A271A,
+Rout,Illusion,(2) - Apprentice,653,Creatures and people up to level 20 flee from combat for 30 sec,"Purchase at CW
+(Must be level 60 Illusion)",000A2718,
+Calm,Illusion,(3) - Adept,91,Creatures and people up to level 9 won't fight for 30 seconds,"Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A2711,
+Muffle,Illusion,(3) - Adept,88,Allows player to move more quietly for 180 seconds,"Purchase at UK, FH, DR,WH, BP, CW, PK, MK",000A270F,
+Rally,Illusion,(3) - Adept,300,Targets won't flee for 60 seconds and boosts player's health and stamina,"Purchase at BP, CW",000A2713,
+Invisibility,Illusion,(4) - Expert,625,Caster is invisible (but can still be heard) for 30 seconds; activating an object or attacking will break the spell,Purchase at CW,000A2715,
+Mayhem,Illusion,(4) - Expert,1250,Creatures and people up to level 25 will attack anyone nearby for 60 seconds,Purchase at CW afterIllusion Ritual Spell quest,000A2719,
+Courage,Illusion,(5) - Master,46,Target won't flee for 60 seconds and gains some extra health and stamina,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK
+
+Find in Treva's Watch",0009E2AD,
+Frenzy,Illusion,(5) - Master,330,Creatures and people up to level 14 will attack anyone nearby,"Purchase at BP, CW",000A2714,
+Frenzy Rune (DB),Illusion,(5) - Master,310,(DB) Targets up to level 20 that fail to resist are frenzied for 30 seconds,,,
+Greater Ward,Restoration,(1) - Novice,341,Increases armor rating by 80 points and negates up to 80 points of spell damage or effects,Purchase at CW,000A2722,
+Grand Healing,Restoration,(2) - Apprentice,680,Heals everyone (including enemies) close to caster (up to 300 points),Purchase at CW,000DD643,
+Guardian Circle,Restoration,(2) - Apprentice,1220,Undead up to level 35 entering the circle will flee; caster heals 20/s,Purchase at CW afterRestoration Ritual Spellquest,000FDE7B,
+Heal Undead (DG),Restoration,(2) - Apprentice,370,"(DG) Heals the undead target 75 points, but not the living, atronachs or machines",,,
+Healing Hands,Restoration,(2) - Apprentice,89,"Heals target 10/s, but not undead, atronachs, or machines","Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK
+Rewarded by Marise Aravel after doing her quest",000A271E,
+Repel Undead,Restoration,(2) - Apprentice,655,Affected undead to level 16 flee for 30 seconds,Purchase at CW,000A2726,
+Bane of the Undead,Restoration,(3) - Adept,1200,Sets undead up to level 30 on fire and makes them flee for 30 seconds,Restoration Ritual Spellquest reward,000DD647,
+Close Wounds,Restoration,(3) - Adept,360,Heals caster 100 points of health,Purchase at CW,0010F64D,
+Heal Other,Restoration,(3) - Adept,300,"Heals the target 75 points of health, but not undead, atronachs, or machines","Purchase at CW
+
+Find in Shalidor's Maze",000A2727,
+Lesser Ward,Restoration,(3) - Adept,45,Increases armor rating by 40 points and negates up to 40 points of spell damage or effects,"Purchase at UK, FH, DR,WH, FH, RT, BP, CW, PK,MK
+
+Find in Alftand Animonculory",0009E2AE,
+Poison Rune (DB),Restoration,(3) - Adept,290,(DB) Targets that fail to resist take 3 points of poison damage per second for 30 seconds,,,
+Steadfast Ward,Restoration,(3) - Adept,92,Increases armor rating 60 / negates up to 60 points spell damage or effects,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK
+
+Find in Labyrinthian",000A2720,
+Stendarr's Aura (DG),Restoration,(3) - Adept,335,"(DG) For 60 seconds, undead in melee range take 10 points sun damage per second",,,
+Turn Undead,Restoration,(3) - Adept,323,Undead to level 13 flee for 30 seconds,Purchase at CW,000A2721,
+Vampire's Bane (DG),Restoration,(3) - Adept,340,(DG) Sunlight explosion that does 40 points of damage in a 15 foot radius to undead,,,
+Circle of Protection,Restoration,(4) - Expert,650,Undead up to level 20 entering the circle will flee,Purchase at CW,000A2728,
+Fast Healing,Restoration,(4) - Expert,94,Instantly heals caster 50 points,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK",000A271D,
+Necromantic Healing (DG),Restoration,(4) - Expert,115,"(DG) Heals the undead target 10 points per second, but not the living, atronachs or machines",,,
+Repel Lesser Undead,Restoration,(4) - Expert,333,Affected undead to level 8 flee for 30 seconds,Purchase at CW,000A2725,
+Sun Fire (DG),Restoration,(4) - Expert,80,(DG) Ball of sunlight that does 25 points of damage to undead,,,
+Turn Greater Undead,Restoration,(4) - Expert,664,Undead to level 21 flee for 30 seconds,Purchase at CW,000A2729,
+Turn Lesser Undead,Restoration,(4) - Expert,89,Undead to level 6 flee for 30 seconds,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK",000A271F,
+Healing,Restoration,(5) - Master,50,Heals caster 10/s,"Purchase at UK, FH, DR,WH, FH, BP, CW, PK, MK",0009E2AF,

@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Abilities.csv" />
+    <None Remove="Data\Achievements.csv" />
+    <None Remove="Data\AlchemyEffects.csv" />
+    <None Remove="Data\Books.csv" />
+    <None Remove="Data\CollectibleItems.csv" />
+    <None Remove="Data\DragonShouts.csv" />
+    <None Remove="Data\EnchantingEffects.csv" />
+    <None Remove="Data\Followers.csv" />
+    <None Remove="Data\Locations.csv" />
+    <None Remove="Data\Merchants.csv" />
+    <None Remove="Data\NotedLocations.csv" />
+    <None Remove="Data\Quests.csv" />
+    <None Remove="Data\Spells.csv" />
+    <None Remove="Data\UniqueGear.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Abilities.csv" />
+    <EmbeddedResource Include="Data\Achievements.csv" />
+    <EmbeddedResource Include="Data\AlchemyEffects.csv" />
+    <EmbeddedResource Include="Data\Books.csv" />
+    <EmbeddedResource Include="Data\CollectibleItems.csv" />
+    <EmbeddedResource Include="Data\DragonShouts.csv" />
+    <EmbeddedResource Include="Data\EnchantingEffects.csv" />
+    <EmbeddedResource Include="Data\Followers.csv" />
+    <EmbeddedResource Include="Data\Locations.csv" />
+    <EmbeddedResource Include="Data\Merchants.csv" />
+    <EmbeddedResource Include="Data\NotedLocations.csv" />
+    <EmbeddedResource Include="Data\Quests.csv" />
+    <EmbeddedResource Include="Data\Spells.csv" />
+    <EmbeddedResource Include="Data\UniqueGear.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="26.1.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+</Project>

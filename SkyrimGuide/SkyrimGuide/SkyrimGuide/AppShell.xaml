@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:SkyrimGuide.Views"
+       Title="SkyrimGuide"
+       x:Class="SkyrimGuide.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Accent}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+            <!--
+            Default Styles for all Flyout Items
+            https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
+            -->
+            <Style Class="FlyoutItemLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Accent}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Accent}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!--
+            Custom Style you can apply to any Flyout Item
+            -->
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Accent}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <!-- 
+        When the Flyout is visible this defines the content to display in the flyout.
+        FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
+        https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
+    -->
+    <FlyoutItem Title="About" Icon="icon_about.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+    <!--<FlyoutItem Title="Abilities" Icon="icon_feed.png">
+        <ShellContent Route="AbilitiesPage" ContentTemplate="{DataTemplate local:AbilitiesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Quests" Icon="icon_feed.png">
+        <ShellContent Route="QuestsPage" ContentTemplate="{DataTemplate local:QuestsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Spells" Icon="icon_feed.png">
+        <ShellContent Route="SpellsPage" ContentTemplate="{DataTemplate local:SpellsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Merchants" Icon="icon_feed.png">
+        <ShellContent Route="MerchantsPage" ContentTemplate="{DataTemplate local:MerchantsPage}" />
+    </FlyoutItem>-->
+    <!--<FlyoutItem Title="Locations" Icon="icon_feed.png">
+        <ShellContent Route="LocationsPage" ContentTemplate="{DataTemplate local:LocationsPage}" />
+    </FlyoutItem>-->
+    <!--<FlyoutItem Title="Books" Icon="icon_feed.png">
+        <ShellContent Route="BooksPage" ContentTemplate="{DataTemplate local:BooksPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Enchanting Effects" Icon="icon_feed.png">
+        <ShellContent Route="EnchantingEffectsPage" ContentTemplate="{DataTemplate local:EnchantingEffectsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Collectible Items" Icon="icon_feed.png">
+        <ShellContent Route="CollectibleItemsPage" ContentTemplate="{DataTemplate local:CollectibleItemsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Followers" Icon="icon_feed.png">
+        <ShellContent Route="FollowersPage" ContentTemplate="{DataTemplate local:FollowersPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Alchemy Effects" Icon="icon_feed.png">
+        <ShellContent Route="AlchemyEffectsPage" ContentTemplate="{DataTemplate local:AlchemyEffectsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Unique Gear" Icon="icon_feed.png">
+        <ShellContent Route="UniqueGearPage" ContentTemplate="{DataTemplate local:UniqueGearPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Achievements" Icon="icon_feed.png">
+        <ShellContent Route="AchievementsPage" ContentTemplate="{DataTemplate local:AchievementsPage}" />
+    </FlyoutItem>-->
+
+
+</Shell>
