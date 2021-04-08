@@ -24,7 +24,7 @@ namespace SkyrimGuide.Services
             }
         }
 
-        public List<Location> GetLocationByRegion(string region)
+        public List<Location> GetLocationsByRegion(string region)
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {

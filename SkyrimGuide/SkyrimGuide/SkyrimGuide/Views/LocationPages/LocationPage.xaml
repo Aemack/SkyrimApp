@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.LocationPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:LocationViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource Accent}" Spacing="0">
+            <Grid VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <ListView Grid.RowSpan="9" Grid.Row="0" ItemsSource="{Binding MapData }"   x:Name="listView" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Spacing="0" Orientation="Horizontal" x:Name="StackLay" HorizontalOptions="Center" BackgroundColor="SeaGreen">
+                                    <Image x:Name="{Binding RowData[0]}" Source="{Binding RowData[0].ImageName}" Opacity="{Binding RowData[0].Opacity}" Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[1]}" Source="{Binding RowData[1].ImageName}"  Opacity="{Binding RowData[1].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[2]}" Source="{Binding RowData[2].ImageName}" Opacity="{Binding RowData[2].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[3]}" Source="{Binding RowData[3].ImageName}" Opacity="{Binding RowData[3].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[4]}" Source="{Binding RowData[4].ImageName}" Opacity="{Binding RowData[4].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[5]}" Source="{Binding RowData[5].ImageName}" Opacity="{Binding RowData[5].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[6]}" Source="{Binding RowData[6].ImageName}" Opacity="{Binding RowData[6].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[7]}" Source="{Binding RowData[7].ImageName}" Opacity="{Binding RowData[7].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[8]}" Source="{Binding RowData[8].ImageName}" Opacity="{Binding RowData[8].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[9]}" Source="{Binding RowData[9].ImageName}" Opacity="{Binding RowData[9].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[10]}" Source="{Binding RowData[10].ImageName}" Opacity="{Binding RowData[10].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                    <Image x:Name="{Binding RowData[11]}" Source="{Binding RowData[11].ImageName}" Opacity="{Binding RowData[11].Opacity}"  Aspect="Fill" WidthRequest="35" HeightRequest="35"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackLayout Grid.Row="10" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <!--<Label FontSize="20" Text="TYPE:" TextColor="{StaticResource PrimaryText}"></Label>-->
+                    <Label FontSize="20" TextTransform="Uppercase" TextDecorations="Underline" Text="{Binding Location.LocationName}" TextColor="{StaticResource PrimaryText}"></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Row="12" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <!--<Label FontSize="20" Text="TYPE:" TextColor="{StaticResource PrimaryText}"></Label>-->
+                    <Label FontSize="20" Text="{Binding Location.LocationCategory}" TextColor="{StaticResource PrimaryText}"></Label>
+                </StackLayout>
+                <StackLayout Grid.Row="14" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <!--<Label FontSize="20" Text="REGION:" TextColor="{StaticResource PrimaryText}"></Label>-->
+                    <Label FontSize="20" Text="{Binding Location.Region}" TextColor="{StaticResource PrimaryText}"></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Row="16" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label FontSize="20" Text="DISCOVERED" TextColor="{StaticResource PrimaryText}" VerticalOptions="Center"></Label>
+                    <CheckBox   HorizontalOptions="CenterAndExpand" VerticalOptions="Center" IsChecked="{Binding Location.Check}" Color="{StaticResource PrimaryText}"></CheckBox>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,17 +1,25 @@
-﻿using SkyrimGuide.Services;
+﻿using SkyrimGuide.Models;
+using SkyrimGuide.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SkyrimGuide.ViewModels
 {
-    class LocationViewModel
+    public class LocationViewModel : BaseViewModel
     {
-        public List<string> Regions { get; set; }
+        public Location Location { get; set; }
+        public List<MapRow> MapData { get; set; }
+
         public LocationViewModel()
         {
-            var ls = new LocationService();
-            Regions = ls.GetRegionNames();
+        }
+
+        public LocationViewModel(Location location)
+        {
+            Location = location;
+            var ms = new MapService();
+            MapData = ms.SetUpMap(Location);
         }
     }
 }

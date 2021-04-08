@@ -92,9 +92,12 @@
     <FlyoutItem Title="Merchants" Icon="icon_feed.png">
         <ShellContent Route="MerchantsPage" ContentTemplate="{DataTemplate local:MerchantsPage}" />
     </FlyoutItem>-->
-    <!--<FlyoutItem Title="Locations" Icon="icon_feed.png">
-        <ShellContent Route="LocationsPage" ContentTemplate="{DataTemplate local:LocationsPage}" />
-    </FlyoutItem>-->
+    <FlyoutItem Title="Locations" Icon="icon_feed.png">
+        <ShellContent Route="LocationRegionsPage" ContentTemplate="{DataTemplate local:LocationRegionsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Shouts" Icon="icon_feed.png">
+        <ShellContent Route="ShoutTypesPage" ContentTemplate="{DataTemplate local:ShoutTypesPage}" />
+    </FlyoutItem>
     <!--<FlyoutItem Title="Books" Icon="icon_feed.png">
         <ShellContent Route="BooksPage" ContentTemplate="{DataTemplate local:BooksPage}" />
     </FlyoutItem>

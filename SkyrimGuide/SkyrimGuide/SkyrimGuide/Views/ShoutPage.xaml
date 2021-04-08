@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.ShoutPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+            <vm:ShoutViewModel />
+        </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Primary}">
+        <Grid VerticalOptions="CenterAndExpand" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Shout Name:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Shout.Shout}" Grid.Column="1" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Word Of Power:" Grid.Column="0" Grid.Row="2"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Shout.WordOfPower}" Grid.Column="1" Grid.Row="2"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Translation:" Grid.Column="0" Grid.Row="4"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Shout.Translation}" Grid.Column="1" Grid.Row="4"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Location:" Grid.Column="0" Grid.Row="6"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Shout.WordWallLocation}" Grid.Column="1" Grid.Row="6"/>
+            <Button Text="See Location" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource SecondText}" Clicked="Location_Clicked" Grid.Row="8" Grid.ColumnSpan="2" IsVisible="{Binding HasLocationlink}"></Button>
+        </Grid>
+    </StackLayout>
+</ContentPage>
