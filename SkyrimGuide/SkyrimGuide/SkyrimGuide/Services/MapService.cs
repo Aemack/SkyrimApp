@@ -38,9 +38,10 @@ namespace SkyrimGuide.Services
 
         public string GetMapImageFromCoord(string coords)
         {
+            coords = coords.Replace("[", "").Replace("]", "");
             var alphabet = new List<char> { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' };
             int count = 0;
-            for (int it = 1; it < 8; it++)
+            for (int it = 1; it <= 8; it++)
             {
                 for (int i = 0; i <= 11; i++)
                 {

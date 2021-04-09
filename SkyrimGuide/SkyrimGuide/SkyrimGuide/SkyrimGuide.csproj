@@ -47,6 +47,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\CollectibleItemPages\CollectibleItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CollectibleItemPages\CollectibleItemsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CollectibleItemPages\CollectibleItemTypesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\LocationPages\LocationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -56,13 +65,13 @@
     <EmbeddedResource Update="Views\LocationPages\LocationsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShoutPage.xaml">
+    <EmbeddedResource Update="Views\ShoutPages\ShoutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShoutsPage.xaml">
+    <EmbeddedResource Update="Views\ShoutPages\ShoutsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ShoutTypesPage.xaml">
+    <EmbeddedResource Update="Views\ShoutPages\ShoutTypesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

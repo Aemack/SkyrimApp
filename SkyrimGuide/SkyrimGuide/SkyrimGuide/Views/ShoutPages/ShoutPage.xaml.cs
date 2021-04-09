@@ -36,5 +36,12 @@ namespace SkyrimGuide.Views
         {
             Navigation.PushAsync(new LocationPage(ShoutLocation));
         }
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var ls = new ShoutService();
+            var locationChecked = (CheckBox)sender;
+            ls.UpdateShoutCheck(locationChecked.IsChecked, Shout);
+        }
     }
 }

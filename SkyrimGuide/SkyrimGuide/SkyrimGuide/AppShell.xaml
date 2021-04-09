@@ -98,15 +98,16 @@
     <FlyoutItem Title="Shouts" Icon="icon_feed.png">
         <ShellContent Route="ShoutTypesPage" ContentTemplate="{DataTemplate local:ShoutTypesPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Collectible Items" Icon="icon_feed.png">
+        <ShellContent Route="CollectibleItemTypesPage" ContentTemplate="{DataTemplate local:CollectibleItemTypesPage}" />
+    </FlyoutItem>
     <!--<FlyoutItem Title="Books" Icon="icon_feed.png">
         <ShellContent Route="BooksPage" ContentTemplate="{DataTemplate local:BooksPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Enchanting Effects" Icon="icon_feed.png">
         <ShellContent Route="EnchantingEffectsPage" ContentTemplate="{DataTemplate local:EnchantingEffectsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Collectible Items" Icon="icon_feed.png">
-        <ShellContent Route="CollectibleItemsPage" ContentTemplate="{DataTemplate local:CollectibleItemsPage}" />
-    </FlyoutItem>
+
     <FlyoutItem Title="Followers" Icon="icon_feed.png">
         <ShellContent Route="FollowersPage" ContentTemplate="{DataTemplate local:FollowersPage}" />
     </FlyoutItem>

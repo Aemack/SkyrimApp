@@ -32,6 +32,11 @@ namespace SkyrimGuide.Views
             this.BindingContext = new LocationViewModel(Location);
         }
 
-
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var ls = new LocationService();
+            var locationChecked = (CheckBox)sender;
+            ls.UpdateLocationCheck(locationChecked.IsChecked, Location);
+        }
     }
 }

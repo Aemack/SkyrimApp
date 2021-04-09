@@ -52,7 +52,7 @@
 
                 <StackLayout Grid.Row="16" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Label FontSize="20" Text="DISCOVERED" TextColor="{StaticResource PrimaryText}" VerticalOptions="Center"></Label>
-                    <CheckBox   HorizontalOptions="CenterAndExpand" VerticalOptions="Center" IsChecked="{Binding Location.Check}" Color="{StaticResource PrimaryText}"></CheckBox>
+                    <CheckBox CheckedChanged="CheckBox_CheckedChanged"   HorizontalOptions="CenterAndExpand" VerticalOptions="Center" IsChecked="{Binding Location.Check}" Color="{StaticResource PrimaryText}"></CheckBox>
                 </StackLayout>
             </Grid>
         </StackLayout>

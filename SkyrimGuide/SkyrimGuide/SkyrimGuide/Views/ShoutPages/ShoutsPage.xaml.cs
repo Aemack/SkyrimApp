@@ -40,5 +40,13 @@ namespace SkyrimGuide.Views
             var shout = (DragonShout)item.SelectedItem;
             Navigation.PushAsync(new ShoutPage(shout));
         }
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            var ss = new ShoutService();
+            var shoutChecked = (CheckBox)sender;
+            DragonShout shout = shoutChecked.BindingContext as DragonShout;
+            ss.UpdateShoutCheck(shoutChecked.IsChecked, shout);
+        }
     }
 }

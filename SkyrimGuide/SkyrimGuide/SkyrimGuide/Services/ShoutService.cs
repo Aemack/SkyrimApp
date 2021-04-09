@@ -56,5 +56,15 @@ namespace SkyrimGuide.Services
                 return conn.Table<Location>().Where(x => x.LocationName.Contains(shout.WordWallLocation)).FirstOrDefault();
             }
         }
+
+        public void UpdateShoutCheck(bool check, DragonShout shout)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                var result = conn.Table<DragonShout>().Where(x => x.ID == shout.ID).FirstOrDefault();
+                result.Check = check;
+                conn.Update(result);
+            }
+        }
     }
 }

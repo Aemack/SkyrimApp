@@ -57,5 +57,15 @@ namespace SkyrimGuide.Services
                 return subHeadings;
             }
         }
+
+        public void UpdateLocationCheck(bool check, Location location)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                var result = conn.Table<Location>().Where(x => x.ID == location.ID).FirstOrDefault();
+                result.Check = check;
+                conn.Update(result);
+            }
+        }
     }
 }

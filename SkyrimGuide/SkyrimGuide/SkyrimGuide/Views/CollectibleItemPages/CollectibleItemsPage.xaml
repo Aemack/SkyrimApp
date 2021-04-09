@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
-             x:Class="SkyrimGuide.Views.ShoutsPage"
+             x:Class="SkyrimGuide.Views.CollectibleItemsPage"
              Title="{Binding Title}">
     <ContentPage.BindingContext>
-        <vm:ShoutsViewModel>
+        <vm:CollectibleItemsViewModel>
             <x:Arguments>
-                <x:String x:Name="ShoutType">
+                <x:String>
                 </x:String>
             </x:Arguments>
-        </vm:ShoutsViewModel>
+        </vm:CollectibleItemsViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <ListView x:Name="shoutsListView"
+        <ListView x:Name="itemsListView"
               SeparatorColor="{StaticResource Accent}"
               HasUnevenRows="True"
-			  ItemsSource="{Binding Shouts}" ItemTapped="Shout_Clicked" BackgroundColor="{StaticResource Accent}">
+			  ItemsSource="{Binding Items}" ItemTapped="Item_Clicked" BackgroundColor="{StaticResource Accent}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -23,17 +23,13 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition  />
-                                <ColumnDefinition  />
                             </Grid.ColumnDefinitions>
                             <StackLayout VerticalOptions="FillAndExpand" Padding="5"  Grid.Column="0">
-                                <Label FontSize="17"  Text="{Binding WordOfPower}" HorizontalTextAlignment="Center"  TextColor="{StaticResource PrimaryText}"/>
-                            </StackLayout>
-                            <StackLayout VerticalOptions="FillAndExpand" Padding="5" HorizontalOptions="Center" Grid.Column="1" >
-                                <Label FontSize="12"  Text="{Binding Shout}" HorizontalTextAlignment="Center"  TextColor="{StaticResource PrimaryText}"/>
+                                <Label FontSize="17"  Text="{Binding ItemName}" HorizontalTextAlignment="Center"  TextColor="{StaticResource PrimaryText}"/>
                             </StackLayout>
                             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="5"  Grid.Column="2" >
-                                <Label Text="Discovered" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{StaticResource PrimaryText}"/>
-                                <CheckBox IsChecked="{Binding Translation}" Color="{StaticResource PrimaryText}" HorizontalOptions="Center" VerticalOptions="Center"  BindingContext="{Binding .}"/>
+                                <Label Text="Found" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{StaticResource PrimaryText}"/>
+                                <CheckBox CheckedChanged="CheckBox_CheckedChanged" IsChecked="{Binding Check}" Color="{StaticResource PrimaryText}" HorizontalOptions="Center" VerticalOptions="Center"  BindingContext="{Binding .}"/>
                             </StackLayout>
                         </Grid>
                     </ViewCell>
