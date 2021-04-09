@@ -105,6 +105,9 @@
     <FlyoutItem Title="Achievements" Icon="icon_feed.png">
         <ShellContent Route="AchievementsPage" ContentTemplate="{DataTemplate local:AchievementsPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Alchemy Effects" Icon="icon_feed.png">
+        <ShellContent Route="AlchemyEffectsTypesPage" ContentTemplate="{DataTemplate local:AlchemyEffectsTypesPage}" />
+    </FlyoutItem>
     <!--<FlyoutItem Title="Books" Icon="icon_feed.png">
         <ShellContent Route="BooksPage" ContentTemplate="{DataTemplate local:BooksPage}" />
     </FlyoutItem>
@@ -115,9 +118,7 @@
     <FlyoutItem Title="Followers" Icon="icon_feed.png">
         <ShellContent Route="FollowersPage" ContentTemplate="{DataTemplate local:FollowersPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Alchemy Effects" Icon="icon_feed.png">
-        <ShellContent Route="AlchemyEffectsPage" ContentTemplate="{DataTemplate local:AlchemyEffectsPage}" />
-    </FlyoutItem>
+
     <FlyoutItem Title="Unique Gear" Icon="icon_feed.png">
         <ShellContent Route="UniqueGearPage" ContentTemplate="{DataTemplate local:UniqueGearPage}" />
     </FlyoutItem>

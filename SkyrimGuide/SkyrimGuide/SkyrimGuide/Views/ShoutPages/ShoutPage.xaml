@@ -15,7 +15,7 @@
             <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Translation:" Grid.Column="0" Grid.Row="4"/>
             <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Shout.Translation}" Grid.Column="1" Grid.Row="4"/>
             <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Location:" Grid.Column="0" Grid.Row="6"/>
-            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Shout.WordWallLocation}" Grid.Column="1" Grid.Row="6"/>
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" Text="{Binding Shout.WordWallLocation}" Grid.Column="1" Grid.Row="6"/>
             <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Learned:" Grid.Column="0" Grid.Row="8"/>
             <CheckBox CheckedChanged="CheckBox_CheckedChanged" Color="{StaticResource PrimaryText}" IsChecked="{Binding Shout.Check}" Grid.Column="1" Grid.Row="8"/>
 

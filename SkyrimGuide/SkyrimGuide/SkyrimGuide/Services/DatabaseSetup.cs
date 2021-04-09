@@ -431,7 +431,8 @@ namespace SkyrimGuide.Services
                                 alchemyEffects.Add(new AlchemyEffect
                                 {
                                     ItemName = csvReader.GetField<string>(0),
-                                    Effect = csvReader.GetField<string>(1)
+                                    Effect = csvReader.GetField<string>(1),
+                                    Version = csvReader.GetField<string>(2),
                                 });
                             }
                         }

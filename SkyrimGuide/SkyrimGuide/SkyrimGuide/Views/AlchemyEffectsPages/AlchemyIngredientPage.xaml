@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.AlchemyIngredientPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:AlchemyIngredientViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView x:Name="alchemyItemListView"
+              SeparatorColor="{StaticResource Accent}"
+              HasUnevenRows="True"
+			  ItemsSource="{Binding AlchemyIngredients}" BackgroundColor="{StaticResource Accent}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <Grid BackgroundColor="{StaticResource Primary}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="16" Grid.Column="0" >
+                                <Label TextColor="{StaticResource PrimaryText}" FontSize="20"  Text="{Binding Effect}" />
+                            </StackLayout>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="16" Grid.Column="1" >
+                                <CheckBox Color="{StaticResource PrimaryText}" VerticalOptions="Center" IsChecked="{Binding Check}" CheckedChanged="Check_CheckedChanged"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

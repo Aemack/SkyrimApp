@@ -12,6 +12,7 @@ namespace SkyrimGuide.Models
         public int ID { get; set; }
         public string ItemName { get; set; }
         public string Effect { get; set; }
+        public string Version { get; set; }
         public bool Check { get; set; }
     }
 }

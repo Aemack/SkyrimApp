@@ -53,7 +53,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Location>().Where(x => x.LocationName.Contains(shout.WordWallLocation)).FirstOrDefault();
+                return conn.Table<Location>().Where(x => shout.WordWallLocation.Contains(x.LocationName)).FirstOrDefault();
             }
         }
 
