@@ -80,9 +80,7 @@
     <FlyoutItem Title="About" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <!--<FlyoutItem Title="Abilities" Icon="icon_feed.png">
-        <ShellContent Route="AbilitiesPage" ContentTemplate="{DataTemplate local:AbilitiesPage}" />
-    </FlyoutItem>
+    <!--
     <FlyoutItem Title="Quests" Icon="icon_feed.png">
         <ShellContent Route="QuestsPage" ContentTemplate="{DataTemplate local:QuestsPage}" />
     </FlyoutItem>
@@ -92,6 +90,9 @@
     <FlyoutItem Title="Merchants" Icon="icon_feed.png">
         <ShellContent Route="MerchantsPage" ContentTemplate="{DataTemplate local:MerchantsPage}" />
     </FlyoutItem>-->
+    <FlyoutItem Title="Abilities" Icon="icon_feed.png">
+        <ShellContent Route="AbilityTypesPage" ContentTemplate="{DataTemplate local:AbilityTypesPage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Locations" Icon="icon_feed.png">
         <ShellContent Route="LocationRegionsPage" ContentTemplate="{DataTemplate local:LocationRegionsPage}" />
     </FlyoutItem>
@@ -100,6 +101,9 @@
     </FlyoutItem>
     <FlyoutItem Title="Collectible Items" Icon="icon_feed.png">
         <ShellContent Route="CollectibleItemTypesPage" ContentTemplate="{DataTemplate local:CollectibleItemTypesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Achievements" Icon="icon_feed.png">
+        <ShellContent Route="AchievementsPage" ContentTemplate="{DataTemplate local:AchievementsPage}" />
     </FlyoutItem>
     <!--<FlyoutItem Title="Books" Icon="icon_feed.png">
         <ShellContent Route="BooksPage" ContentTemplate="{DataTemplate local:BooksPage}" />
@@ -117,9 +121,7 @@
     <FlyoutItem Title="Unique Gear" Icon="icon_feed.png">
         <ShellContent Route="UniqueGearPage" ContentTemplate="{DataTemplate local:UniqueGearPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Achievements" Icon="icon_feed.png">
-        <ShellContent Route="AchievementsPage" ContentTemplate="{DataTemplate local:AchievementsPage}" />
-    </FlyoutItem>-->
+-->
 
 
 </Shell>

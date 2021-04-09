@@ -464,7 +464,8 @@ namespace SkyrimGuide.Services
                                     Name = csvReader.GetField<string>(0),
                                     Version = csvReader.GetField<string>(1),
                                     Aquired = csvReader.GetField<string>(2),
-                                    Quest = csvReader.GetField<string>(3)
+                                    Quest = csvReader.GetField<string>(3),
+                                    Description = csvReader.GetField<string>(4)
                                 });
                             }
                         }

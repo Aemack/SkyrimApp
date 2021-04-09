@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SkyrimGuide.Models
 {
-    class Achievement
+    public class Achievement
     {
 
         [PrimaryKey, AutoIncrement]
@@ -14,6 +14,7 @@ namespace SkyrimGuide.Models
         public string Version { get; set; }
         public string Aquired { get; set; }
         public string Quest { get; set; }
+        public string Description { get; set; }
         public bool Check { get; set; }
     }
 }

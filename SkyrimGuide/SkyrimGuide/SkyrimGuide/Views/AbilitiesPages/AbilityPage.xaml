@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.AbilityPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:AbilityViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Accent}">
+        <Grid Padding="10" VerticalOptions="Center" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Ability Name:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Ability.Name}" Grid.Column="1" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Aquired From:" Grid.Column="0" Grid.Row="2"/>
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Ability.AquiredFrom}" Grid.Column="1" Grid.Row="2" Grid.RowSpan="1"/>
+            <!--<Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Location:" Grid.Column="0" Grid.Row="4"/>-->
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Ability.Quest}" Grid.Column="1" Grid.Row="4" Grid.RowSpan="3"/>
+            <Label FontSize="20" VerticalOptions="Center" TextColor="{StaticResource PrimaryText}" Text="Learned:" Grid.Column="0" Grid.Row="6"/>
+            <CheckBox VerticalOptions="Center" CheckedChanged="CheckBox_CheckedChanged" Color="{StaticResource PrimaryText}" IsChecked="{Binding Ability.Check}" Grid.Column="1" Grid.Row="6"/>
+            <Button Text="See Location" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource SecondText}" Clicked="Location_Clicked" Grid.Row="8" Grid.ColumnSpan="2" IsVisible="{Binding HasLocationLink}"></Button>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
