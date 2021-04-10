@@ -105,7 +105,16 @@ namespace SkyrimGuide.Services
                                     Level = csvReader.GetField<string>(2),
                                     Value = csvReader.GetField<string>(3),
                                     Description = csvReader.GetField<string>(4),
-                                    Location = csvReader.GetField<string>(5),
+                                    Location = csvReader.GetField<string>(5)
+                                            .Replace("UK", "Understone Keep")
+                                            .Replace("FH", "The Frozen Hearth - Winterhold	")
+                                            .Replace("DR", "Dragonsreach")
+                                            .Replace("WH", "The White Hall - Dawnstar")
+                                            .Replace("FAH", "Falion's House")
+                                            .Replace("BP", "The Blue Palace")
+                                            .Replace("CW", "College of Winterhold")
+                                            .Replace("PK", "Palace of the Kings")
+                                            .Replace("MK", "Mistveil Keep"),
                                     ItemID = csvReader.GetField<string>(6)
                                 });
                             }
