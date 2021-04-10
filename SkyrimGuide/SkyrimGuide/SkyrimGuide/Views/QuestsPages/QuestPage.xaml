@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.QuestPage">
+    <ContentPage.BindingContext>
+        <vm:QuestViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Accent}">
+        <Grid Padding="10" VerticalOptions="Center" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Quest Name:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Quest.QuestName}" Grid.Column="1" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Giver:" Grid.Column="0" Grid.Row="2"/>
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Quest.Giver}" Grid.Column="1" Grid.Row="2" Grid.RowSpan="1"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Description:" Grid.Column="0" Grid.Row="4"/>
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Quest.Description}" Grid.Column="1" Grid.Row="4" Grid.RowSpan="3"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Location:" Grid.Column="0" Grid.Row="6"/>
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Quest.Location}" Grid.Column="1" Grid.Row="6" />
+            <Label FontSize="20" VerticalOptions="Center" TextColor="{StaticResource PrimaryText}" Text="Completed:" Grid.Column="0" Grid.Row="8"/>
+            <CheckBox VerticalOptions="Center" CheckedChanged="CheckBox_CheckedChanged" Color="{StaticResource PrimaryText}" HorizontalOptions="Center" IsChecked="{Binding Quest.Check}" Grid.Column="1" Grid.Row="8"/>
+            <Button Text="See Location" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource SecondText}" Clicked="Location_Clicked" Grid.Row="10" Grid.ColumnSpan="2" IsVisible="{Binding HasLocationLink}"></Button>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

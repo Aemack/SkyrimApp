@@ -15,6 +15,8 @@ namespace SkyrimGuide.Models
         public string QuestClass { get; set; }
         public string SubQuestClass { get; set; }
         public string SubSubQuestClass { get; set; }
+        public  string Location { get; set; }
+
         public bool Check { get; set; }
 
     }

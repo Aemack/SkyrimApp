@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.QuestsPage">
+    <ContentPage.BindingContext>
+        <vm:QuestsViewModel>
+            <x:Arguments>
+                <x:String />
+                <x:String />
+                <x:String />
+            </x:Arguments>
+        </vm:QuestsViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView x:Name="locationsListView"
+              SeparatorColor="{StaticResource Accent}"
+              HasUnevenRows="True"
+			  ItemsSource="{Binding Quests}" ItemTapped="Quest_Clicked" BackgroundColor="{StaticResource Accent}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid VerticalOptions="CenterAndExpand" BackgroundColor="{StaticResource Primary}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition  />
+                                <ColumnDefinition  />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5"  Grid.Column="0">
+                                <Label FontSize="17"  Text="{Binding QuestName}" HorizontalTextAlignment="Center"  TextColor="{StaticResource PrimaryText}"/>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5" HorizontalOptions="Center" Grid.Column="1" >
+                                <Label FontSize="12"  Text="{Binding Location}" HorizontalTextAlignment="Center"  TextColor="{StaticResource PrimaryText}"/>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="5"  Grid.Column="2" >
+                                <Label Text="Discovered" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{StaticResource PrimaryText}"/>
+                                <CheckBox CheckedChanged="CheckBox_CheckedChanged" IsChecked="{Binding Check}" Color="{StaticResource PrimaryText}" HorizontalOptions="Center" VerticalOptions="Center"  BindingContext="{Binding .}"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

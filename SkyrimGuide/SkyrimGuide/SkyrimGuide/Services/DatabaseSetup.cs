@@ -142,7 +142,8 @@ namespace SkyrimGuide.Services
                                     Giver = csvReader.GetField<string>(2),
                                     QuestClass = csvReader.GetField<string>(3),
                                     SubQuestClass = csvReader.GetField<string>(4),
-                                    SubSubQuestClass = csvReader.GetField<string>(5)
+                                    SubSubQuestClass = csvReader.GetField<string>(5),
+                                    Location = csvReader.GetField<string>(6)
                                 });
                             }
                         }
