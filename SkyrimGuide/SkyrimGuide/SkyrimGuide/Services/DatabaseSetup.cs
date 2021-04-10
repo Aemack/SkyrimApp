@@ -401,8 +401,18 @@ namespace SkyrimGuide.Services
                                     Author = csvReader.GetField<string>(1),
                                     Description = csvReader.GetField<string>(2),
                                     Value = csvReader.GetField<string>(3),
-                                    Type = csvReader.GetField<string>(4)
-                                });
+                                    Type = csvReader.GetField<string>(4),
+                                    BookLocation = csvReader.GetField<string>(5)
+                                            .Replace("UK", "Understone Keep")
+                                            .Replace("FH", "The Frozen Hearth - Winterhold	")
+                                            .Replace("DR", "Dragonsreach")
+                                            .Replace("WH", "The White Hall - Dawnstar")
+                                            .Replace("FAH", "Falion's House")
+                                            .Replace("BP", "The Blue Palace")
+                                            .Replace("CW", "College of Winterhold")
+                                            .Replace("PK", "Palace of the Kings")
+                                            .Replace("MK", "Mistveil Keep")
+                            });
                             }
                         }
                     }

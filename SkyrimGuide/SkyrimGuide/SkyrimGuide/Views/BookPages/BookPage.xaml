@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.BookPage"
+             Title="{Binding Title}"
+             BackgroundColor="{StaticResource Accent}">
+    <ContentPage.BindingContext>
+        <vm:BookViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Primary}" >
+        <Grid VerticalOptions="FillAndExpand" Margin="15, 25" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Title:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryText}" Text="{Binding Book.BookTitle}" Grid.Column="1" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Author:" Grid.Column="0" Grid.Row="2"/>
+            <Label FontSize="20" HorizontalOptions="Center" TextColor="{StaticResource PrimaryText}" Text="{Binding Book.Author}" Grid.Column="1" Grid.Row="2"/>
+            <Label VerticalOptions="Center" FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Description:" Grid.Column="0" Grid.Row="4"/>
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" Text="{Binding Book.Description}" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2" HorizontalTextAlignment="Center"/>
+            <!--<Label VerticalOptions="Center" FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Location:" Grid.Column="0" Grid.Row="6"/>
+            <Label FontSize="10" TextColor="{StaticResource PrimaryText}" Text="{Binding Book.BookLocation}" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="6"/>-->
+            <Picker IsVisible="{Binding HasLocationLinks}" Title="See Locations" BackgroundColor="{StaticResource Primary}" TitleColor="{StaticResource PrimaryText}" TextColor="{StaticResource PrimaryText}"  x:Name="LocationPicker" SelectedIndexChanged="LocationPicker_SelectedIndexChanged"  HorizontalOptions="FillAndExpand" Grid.ColumnSpan="2" Grid.Row="6"  ItemsSource="{Binding BookLocations}">
+
+            </Picker>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" VerticalOptions="Center" Text="Read:" Grid.Column="0" Grid.Row="8"/>
+            <CheckBox VerticalOptions="Center" HorizontalOptions="Center" CheckedChanged="CheckBox_CheckedChanged" Color="{StaticResource PrimaryText}" IsChecked="{Binding Book.Check}" Grid.Column="1" Grid.Row="8"/>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

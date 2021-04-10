@@ -14,6 +14,7 @@ namespace SkyrimGuide.Models
         public string Description { get; set; }
         public string Value { get; set; }
         public string Type { get; set; }
+        public string BookLocation { get; set; }
         public bool Check { get; set; }
     }
 }

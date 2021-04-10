@@ -15,5 +15,10 @@ namespace SkyrimGuide.Models
         public string Region { get; set; }
         public string MapImage { get; set; }
         public bool Check { get; set; }
+
+        public override string ToString()
+        {
+            return LocationName;
+        }
     }
 }

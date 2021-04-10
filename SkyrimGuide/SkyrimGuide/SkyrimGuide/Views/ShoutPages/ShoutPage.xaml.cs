@@ -40,8 +40,8 @@ namespace SkyrimGuide.Views
         private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
             var ls = new ShoutService();
-            var locationChecked = (CheckBox)sender;
-            ls.UpdateShoutCheck(locationChecked.IsChecked, Shout);
+            var shoutChecked = (CheckBox)sender;
+            ls.UpdateShoutCheck(shoutChecked.IsChecked, Shout);
         }
     }
 }

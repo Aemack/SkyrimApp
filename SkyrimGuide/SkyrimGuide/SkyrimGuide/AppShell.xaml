@@ -94,6 +94,9 @@
     <FlyoutItem Title="Abilities" Icon="icon_feed.png">
         <ShellContent Route="AbilityTypesPage" ContentTemplate="{DataTemplate local:AbilityTypesPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Books" Icon="icon_feed.png">
+        <ShellContent Route="BookTypesPage" ContentTemplate="{DataTemplate local:BookTypesPage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Locations" Icon="icon_feed.png">
         <ShellContent Route="LocationRegionsPage" ContentTemplate="{DataTemplate local:LocationRegionsPage}" />
     </FlyoutItem>
@@ -109,9 +112,7 @@
     <FlyoutItem Title="Alchemy Effects" Icon="icon_feed.png">
         <ShellContent Route="AlchemyEffectsTypesPage" ContentTemplate="{DataTemplate local:AlchemyEffectsTypesPage}" />
     </FlyoutItem>
-    <!--<FlyoutItem Title="Books" Icon="icon_feed.png">
-        <ShellContent Route="BooksPage" ContentTemplate="{DataTemplate local:BooksPage}" />
-    </FlyoutItem>
+    <!--
     <FlyoutItem Title="Enchanting Effects" Icon="icon_feed.png">
         <ShellContent Route="EnchantingEffectsPage" ContentTemplate="{DataTemplate local:EnchantingEffectsPage}" />
     </FlyoutItem>
