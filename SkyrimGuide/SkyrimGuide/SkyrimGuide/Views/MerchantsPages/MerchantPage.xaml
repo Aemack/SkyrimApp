@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.MerchantPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:MerchantViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Primary}">
+        <Grid Padding="10" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Name:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Merchant.Name}" Grid.Column="1" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Merchandise" Grid.Column="0" Grid.Row="2"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Merchant.Merchandise}" Grid.Column="1" Grid.Row="2"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Store Name:" Grid.Column="0" Grid.Row="4"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Merchant.StoreLocationName}" Grid.Column="1" Grid.Row="4"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Master Trader" IsVisible="{Binding Merchant.MasterTrader}" Grid.ColumnSpan="2" Grid.Row="6"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Learned:" Grid.Column="0" Grid.Row="8"/>
+            <CheckBox CheckedChanged="CheckBox_CheckedChanged" Color="{StaticResource PrimaryText}" IsChecked="{Binding Merchant.Check}" Grid.Column="1" Grid.Row="8"/>
+
+            <Button Text="See Location" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource SecondText}" Clicked="Location_Clicked" Grid.Row="10" Grid.ColumnSpan="2" IsVisible="{Binding HasLocationlink}"></Button>
+        </Grid>
+    </StackLayout>
+</ContentPage>

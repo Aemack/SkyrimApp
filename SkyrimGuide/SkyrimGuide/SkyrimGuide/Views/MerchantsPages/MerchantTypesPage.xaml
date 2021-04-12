@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.MerchantTypesPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:MerchantTypesViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView x:Name="merchandiseListView"
+              SeparatorColor="{StaticResource Accent}"
+              HasUnevenRows="True"
+              ItemTapped="OnMore"
+			  ItemsSource="{Binding MerchantTypes}" BackgroundColor="{StaticResource Accent}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <Grid BackgroundColor="{StaticResource Primary}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="16" Grid.Column="0" >
+                                <Label TextColor="{StaticResource PrimaryText}" FontSize="20"  Text="{Binding .}" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
