@@ -7,6 +7,7 @@ namespace SkyrimGuide.Services
 {
     public class MapService
     {
+
         public List<MapRow> SetUpMap(Location location)
         {
             List<MapRow> mapRows = new List<MapRow>();

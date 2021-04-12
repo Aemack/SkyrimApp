@@ -33,8 +33,16 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource Accent}" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Skyrim Checklist" FontSize="Title" HorizontalTextAlignment="Center" TextColor="{StaticResource SecondText}"/>
-                <Label Text="FUS ROH HERE YA GOOO!" FontSize="16" HorizontalTextAlignment="Center" TextColor="{StaticResource SecondText}" Padding="0,0,0,0"/>
+                <Label TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Abilities:"/>
+                            <Span Text="{Binding AbilitiesComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding AbilitiesTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
         </ScrollView>
     </Grid>

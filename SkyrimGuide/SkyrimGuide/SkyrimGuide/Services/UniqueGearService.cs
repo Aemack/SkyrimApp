@@ -8,6 +8,21 @@ namespace SkyrimGuide.Services
 {
     public class UniqueGearService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<UniqueGear>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<UniqueGear>().Count();
+            }
+        }
         public UniqueGear GetGearFromID(int id)
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

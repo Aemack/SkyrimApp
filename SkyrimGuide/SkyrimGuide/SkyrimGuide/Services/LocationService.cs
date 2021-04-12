@@ -8,6 +8,21 @@ namespace SkyrimGuide.Services
 {
     public class LocationService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Location>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Location>().Count();
+            }
+        }
         public Location GetLocationFromID(int id)
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

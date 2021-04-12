@@ -8,6 +8,21 @@ namespace SkyrimGuide.Services
 {
     public class ShoutService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<DragonShout>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<DragonShout>().Count();
+            }
+        }
         public DragonShout GetShoutFromID(int id)
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

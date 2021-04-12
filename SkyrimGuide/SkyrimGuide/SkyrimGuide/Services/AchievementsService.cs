@@ -8,6 +8,22 @@ namespace SkyrimGuide.Services
 {
     public class AchievementsService
     {
+
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Achievement>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Achievement>().Count();
+            }
+        }
         public List<Achievement> GetAllAchievements()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

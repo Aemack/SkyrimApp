@@ -8,6 +8,21 @@ namespace SkyrimGuide.Services
 {
     public class QuestsService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Quest>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Quest>().Count();
+            }
+        }
         public List<Quest> GetAllQuests()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

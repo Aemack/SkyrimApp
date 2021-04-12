@@ -8,6 +8,24 @@ namespace SkyrimGuide.Services
 {
     public class AbilitiesService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                 return conn.Table<Ability>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Ability>().Count();
+            }
+        }
+
+
+
         public List<Ability> GetAllAbilities()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

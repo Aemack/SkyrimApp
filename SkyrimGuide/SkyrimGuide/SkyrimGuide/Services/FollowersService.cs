@@ -8,6 +8,21 @@ namespace SkyrimGuide.Services
 {
     public class FollowersService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Follower>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Follower>().Count();
+            }
+        }
         public Follower GetFollowerFromID(int id)
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

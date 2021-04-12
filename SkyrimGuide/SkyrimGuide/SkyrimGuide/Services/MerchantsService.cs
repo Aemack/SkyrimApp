@@ -6,8 +6,23 @@ using System.Text;
 
 namespace SkyrimGuide.Services
 {
-    class MerchantsService
+    public class MerchantsService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Merchant>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<Merchant>().Count();
+            }
+        }
         public Merchant GetMerchantFromID(int id)
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

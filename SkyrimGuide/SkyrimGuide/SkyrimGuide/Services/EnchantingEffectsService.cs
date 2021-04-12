@@ -8,6 +8,21 @@ namespace SkyrimGuide.Services
 {
     public class EnchantingEffectsService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<EnchantingEffect>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<EnchantingEffect>().Count();
+            }
+        }
         public List<EnchantingEffect> GetAllEnchantingEffects()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

@@ -8,6 +8,21 @@ namespace SkyrimGuide.Services
 {
     public class AlchemyEffectsService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<AlchemyEffect>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<AlchemyEffect>().Count();
+            }
+        }
         public List<AlchemyEffect> GetAllAlchemyEffects()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))

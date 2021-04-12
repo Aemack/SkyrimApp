@@ -9,6 +9,21 @@ namespace SkyrimGuide.Services
 {
     public class CollectibleItemsService
     {
+        public int GetNumberOfComplete()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<CollectibleItem>().Where(x => x.Check == true).Count();
+            }
+        }
+
+        public int GetTotal()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                return conn.Table<CollectibleItem>().Count();
+            }
+        }
         public List<CollectibleItem> GetAllCollectibleItems()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
