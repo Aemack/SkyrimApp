@@ -89,10 +89,16 @@
     <EmbeddedResource Update="Views\CollectibleItemPages\CollectibleItemTypesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\EnchantingEffectPage.xaml">
+    <EmbeddedResource Update="Views\EnchantingEffectsPages\EnchantingEffectPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\EnchantingEffectsPage.xaml">
+    <EmbeddedResource Update="Views\EnchantingEffectsPages\EnchantingEffectsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FollowerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FollowersPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LocationPages\LocationPage.xaml">

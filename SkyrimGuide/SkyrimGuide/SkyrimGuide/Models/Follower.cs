@@ -21,6 +21,7 @@ namespace SkyrimGuide.Models
         public bool Steward { get; set; }
         public bool Pet { get; set; }
         public string Trainer { get; set; }
+        public string Location { get; set; }
         public bool Check { get; set; }
     }
 }

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.FollowerPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:FollowerViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Primary}">
+        <Grid VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Name:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryText}" Text="{Binding Follower.Name}" Grid.Column="1" Grid.Row="0"/>
+            
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Description:" Grid.Column="0" Grid.Row="2"/>
+            <Label FontSize="13" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryText}" Text="{Binding Follower.Description}" Grid.Column="1" Grid.Row="2"/>
+            
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Skills:" Grid.Column="0" Grid.Row="4"/>
+            <Label FontSize="13" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryText}" Text="{Binding Follower.PrimarySkills}" Grid.Column="1" Grid.Row="4"/>
+            
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Marry:" Grid.Column="0" Grid.Row="6"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryText}" IsVisible="{Binding Follower.Marry}" Text="Yes" Grid.Column="1" Grid.Row="6"/>
+            
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Steward:" Grid.Column="0" Grid.Row="8"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryText}" IsVisible="{Binding Follower.Steward}" Text="Yes" Grid.Column="1" Grid.Row="8"/>
+            
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Learned:" Grid.Column="0" Grid.Row="10"/>
+            <CheckBox HorizontalOptions="Center" CheckedChanged="CheckBox_CheckedChanged" Color="{StaticResource PrimaryText}" IsChecked="{Binding Shout.Check}" Grid.Column="1" Grid.Row="10"/>
+
+            <Button Text="See Location" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource SecondText}" Clicked="Location_Clicked" Grid.Row="12" Grid.ColumnSpan="2" IsVisible="{Binding HasLocationlink}"></Button>
+        </Grid>
+    </StackLayout>
+</ContentPage>

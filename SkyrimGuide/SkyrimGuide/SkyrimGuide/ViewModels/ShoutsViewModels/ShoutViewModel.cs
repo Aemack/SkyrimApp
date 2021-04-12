@@ -21,7 +21,7 @@ namespace SkyrimGuide.ViewModels
         {
             Shout = shout;
             var ss = new ShoutService();
-            var ShoutLocation = ss.GetLocationByShout(Shout);
+            ShoutLocation = ss.GetLocationByShout(Shout);
             if (ShoutLocation == null) return;
             HasLocationlink = true;
         }
