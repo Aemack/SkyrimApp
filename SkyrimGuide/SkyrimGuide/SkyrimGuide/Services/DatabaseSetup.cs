@@ -69,7 +69,9 @@ namespace SkyrimGuide.Services
                                     Name = csvReader.GetField<string>(0),
                                     Type = csvReader.GetField<string>(1),
                                     Notes = csvReader.GetField<string>(2),
-                                    Version = csvReader.GetField<string>(3)
+                                    Version = csvReader.GetField<string>(3),
+                                    Location = csvReader.GetField<string>(4),
+                                    Quest = csvReader.GetField<string>(5)
                                 });
                             }
                         }
@@ -267,7 +269,8 @@ namespace SkyrimGuide.Services
                                     Blades = csvReader.GetField<string>(7).Contains("X"),
                                     Steward = csvReader.GetField<string>(8).Contains("X"),
                                     Pet = csvReader.GetField<string>(9).Contains("X"),
-                                    Trainer = csvReader.GetField<string>(10)
+                                    Trainer = csvReader.GetField<string>(10),
+                                    Location = csvReader.GetField<string>(11)
                                 });
                             }
                         }

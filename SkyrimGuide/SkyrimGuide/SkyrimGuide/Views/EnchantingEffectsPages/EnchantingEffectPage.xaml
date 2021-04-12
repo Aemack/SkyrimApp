@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.EnchantingEffectPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:EnchantingEffectViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Accent}">
+        <Grid Padding="10" VerticalOptions="Center" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Name:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Effect.EnchantmentName}" Grid.Column="1" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Works On:" Grid.Column="0" Grid.Row="2"/>
+            <StackLayout Grid.Column="1" Grid.Row="2">
+                <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Head" IsVisible="{Binding Effect.WorksOnHead}" />
+                <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Neck" IsVisible="{Binding Effect.WorksOnNeck}" />
+                <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Chest" IsVisible="{Binding Effect.WorksOnChest}" />
+                <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Hands" IsVisible="{Binding Effect.WorksOnHands}" />
+                <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Finger" IsVisible="{Binding Effect.WorksOnFinger}" />
+                <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Feet" IsVisible="{Binding Effect.WorksOnFeet}" />
+                <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="Shield" IsVisible="{Binding Effect.WorksOnShield}" />
+            </StackLayout>
+            
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Base Magnitude:" Grid.Column="0" Grid.Row="4" />
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" HorizontalTextAlignment="Center" Text="{Binding Effect.BaseMagnitude}" Grid.Column="1" Grid.Row="4" Grid.RowSpan="3"/>
+            <Label FontSize="20" VerticalOptions="Center" TextColor="{StaticResource PrimaryText}" Text="Learned:" Grid.Column="0" Grid.Row="6"/>
+            <CheckBox VerticalOptions="Center" CheckedChanged="CheckBox_CheckedChanged" HorizontalOptions="Center" Color="{StaticResource PrimaryText}" IsChecked="{Binding Achievement.Check}" Grid.Column="1" Grid.Row="6"/>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

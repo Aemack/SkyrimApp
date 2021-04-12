@@ -21,9 +21,12 @@ namespace SkyrimGuide.ViewModels
             Quest = quest;
             Title = Quest.QuestName;
             var qs = new QuestsService();
-            QuestLocation = qs.GetLocationByQuest(Quest);
-            if (QuestLocation == null) return;
-            HasLocationLink = true;
+            if (Quest.Location != "")
+            {
+                QuestLocation = qs.GetLocationByQuest(Quest);
+                if (QuestLocation == null) return;
+                HasLocationLink = true;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SkyrimGuide.ViewModels
 {
-    public class AchievementViewModel
+    public class AchievementViewModel : BaseViewModel
     {
         public Achievement Achievement { get; set; }
         public AchievementViewModel()
@@ -15,6 +15,7 @@ namespace SkyrimGuide.ViewModels
 
         public AchievementViewModel(Achievement achievement)
         {
+            Title = achievement.Name;
             Achievement = achievement;
         }
     }

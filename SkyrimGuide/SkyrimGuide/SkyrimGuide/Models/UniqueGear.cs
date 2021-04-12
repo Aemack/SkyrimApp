@@ -14,6 +14,8 @@ namespace SkyrimGuide.Models
         public string Type { get; set; }
         public string Notes { get; set; }
         public string Version { get; set; }
+        public string Quest { get; set; }
+        public string Location { get; set; }
         public bool Check { get; set; }
     }
 }

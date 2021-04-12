@@ -113,18 +113,20 @@
     <FlyoutItem Title="Alchemy Effects" Icon="icon_feed.png">
         <ShellContent Route="AlchemyEffectsTypesPage" ContentTemplate="{DataTemplate local:AlchemyEffectsTypesPage}" />
     </FlyoutItem>
-    <!--
+    <FlyoutItem Title="Unique Gear" Icon="icon_feed.png">
+        <ShellContent Route="UniqueGearTypesPage" ContentTemplate="{DataTemplate local:UniqueGearTypesPage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Enchanting Effects" Icon="icon_feed.png">
         <ShellContent Route="EnchantingEffectsPage" ContentTemplate="{DataTemplate local:EnchantingEffectsPage}" />
     </FlyoutItem>
+    <!--
+
 
     <FlyoutItem Title="Followers" Icon="icon_feed.png">
         <ShellContent Route="FollowersPage" ContentTemplate="{DataTemplate local:FollowersPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Unique Gear" Icon="icon_feed.png">
-        <ShellContent Route="UniqueGearPage" ContentTemplate="{DataTemplate local:UniqueGearPage}" />
-    </FlyoutItem>
+
 -->
 
 

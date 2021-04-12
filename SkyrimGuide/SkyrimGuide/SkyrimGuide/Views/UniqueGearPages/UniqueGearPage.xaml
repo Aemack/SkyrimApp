@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:SkyrimGuide.ViewModels"
+             x:Class="SkyrimGuide.Views.UniqueGearPage">
+    <ContentPage.BindingContext>
+        <vm:UniqueGearViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout BackgroundColor="{StaticResource Primary}">
+        <Grid VerticalOptions="CenterAndExpand" BackgroundColor="{StaticResource Primary}">
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Name:" Grid.Column="0" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Item.Name}" Grid.Column="1" Grid.Row="0"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Type:" Grid.Column="0" Grid.Row="2"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="{Binding Item.Type}" Grid.Column="1" Grid.Row="2"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Notes:" Grid.Column="0" Grid.Row="4"/>
+            <Label FontSize="15" TextColor="{StaticResource PrimaryText}" Text="{Binding Item.Notes}" Grid.Column="1" Grid.Row="4" Grid.RowSpan="2"/>
+            <Label IsVisible="{Binding HasLocationLink}" FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Location:" Grid.Column="0" Grid.Row="6"/>
+            <Label IsVisible="{Binding HasLocationLink}" FontSize="15" TextColor="{StaticResource PrimaryText}" Text="{Binding Item.Location}" Grid.Column="1" Grid.Row="6"/>
+            <Label FontSize="20" TextColor="{StaticResource PrimaryText}" Text="Learned:" Grid.Column="0" Grid.Row="8" VerticalTextAlignment="Center"/>
+            <CheckBox CheckedChanged="CheckBox_CheckedChanged" Color="{StaticResource PrimaryText}" IsChecked="{Binding Shout.Check}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="8"/>
+
+            <Button IsVisible="{Binding HasLocationLink}" Text="See Location" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource SecondText}" Clicked="Location_Clicked" Grid.Row="10" Grid.Column="0" />
+            <Button IsVisible="{Binding HasQuestLink}" Text="See Quest" BackgroundColor="{StaticResource Secondary}" TextColor="{StaticResource SecondText}" Clicked="Quest_Clicked" Grid.Row="10" Grid.Column="1" />
+        </Grid>
+    </StackLayout>
+</ContentPage>
