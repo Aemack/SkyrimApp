@@ -27,7 +27,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Quest>().ToList();
+                return conn.Table<Quest>().OrderBy(x => x.QuestName).ToList();
             }
         }
 
@@ -43,7 +43,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Quest>().Where(x => x.QuestClass == questClass).ToList();
+                return conn.Table<Quest>().Where(x => x.QuestClass == questClass).OrderBy(x => x.SubQuestClass).ToList();
             }
         }
 
@@ -51,14 +51,14 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Quest>().Where(x => x.QuestClass == questClass && x.SubQuestClass == subQuestClass).ToList();
+                return conn.Table<Quest>().Where(x => x.QuestClass == questClass && x.SubQuestClass == subQuestClass).OrderBy(x => x.SubSubQuestClass).ToList();
             }
         }
         public List<Quest> GetQuestBySubSubClass(string questClass, string subQuestClass, string subSubQuestClass)
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Quest>().Where(x => x.QuestClass == questClass && x.SubQuestClass == subQuestClass && x.SubSubQuestClass == subSubQuestClass).ToList();
+                return conn.Table<Quest>().Where(x => x.QuestClass == questClass && x.SubQuestClass == subQuestClass && x.SubSubQuestClass == subSubQuestClass).OrderBy(x => x.QuestName).ToList();
             }
         }
 
@@ -67,7 +67,7 @@ namespace SkyrimGuide.Services
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 var subHeadings = new List<string>();
-                var table = conn.Table<Quest>().ToList();
+                var table = conn.Table<Quest>().OrderBy(x => x.QuestClass).ToList();
                 foreach (var row in table)
                 {
                     if (!subHeadings.Contains(row.QuestClass))
@@ -83,7 +83,7 @@ namespace SkyrimGuide.Services
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 var subHeadings = new List<string>();
-                var table = conn.Table<Quest>().Where(x => x.QuestClass == questClass).ToList();
+                var table = conn.Table<Quest>().Where(x => x.QuestClass == questClass).OrderBy(x => x.SubQuestClass).ToList();
                 foreach (var row in table)
                 {
                     if (!subHeadings.Contains(row.SubQuestClass))
@@ -100,7 +100,7 @@ namespace SkyrimGuide.Services
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 var subHeadings = new List<string>();
-                var table = conn.Table<Quest>().Where(x => x.QuestClass == questClass && x.SubQuestClass == subQuestClass).ToList();
+                var table = conn.Table<Quest>().Where(x => x.QuestClass == questClass && x.SubQuestClass == subQuestClass).OrderBy(x => x.SubSubQuestClass).ToList();
                 foreach (var row in table)
                 {
                     if (!subHeadings.Contains(row.SubSubQuestClass))

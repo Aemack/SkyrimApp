@@ -27,7 +27,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<EnchantingEffect>().ToList();
+                return conn.Table<EnchantingEffect>().OrderBy(x => x.EnchantmentName).ToList();
             }
         }
 

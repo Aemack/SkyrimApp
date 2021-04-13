@@ -35,7 +35,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<UniqueGear>().ToList();
+                return conn.Table<UniqueGear>().OrderBy(x => x.Name).ToList();
             }
         }
 
@@ -43,7 +43,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                var table = conn.Table<UniqueGear>().ToList();
+                var table = conn.Table<UniqueGear>().OrderBy(x => x.Type).ToList();
                 var gearTypes = new List<string>();
                 foreach (var gear in table)
                 {
@@ -60,7 +60,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<UniqueGear>().Where(x => x.Type == gearType).ToList();
+                return conn.Table<UniqueGear>().Where(x => x.Type == gearType).OrderBy(x => x.Name).ToList();
             }
         }
 

@@ -35,7 +35,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Book>().ToList();
+                return conn.Table<Book>().OrderBy(x => x.BookTitle).ToList();
             }
         }
 
@@ -43,7 +43,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                var table = conn.Table<Book>().ToList();
+                var table = conn.Table<Book>().OrderBy(x => x.Type).ToList();
                 var bookTypes = new List<string>();
                 foreach (var book in table)
                 {
@@ -60,7 +60,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Book>().Where(x => x.Type== bookType).ToList();
+                return conn.Table<Book>().Where(x => x.Type== bookType).OrderBy(x => x.BookTitle).ToList();
             }
         }
 
@@ -69,7 +69,7 @@ namespace SkyrimGuide.Services
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 var location = book.BookLocation;
-                return conn.Table<Location>().Where(x => location.Contains(x.LocationName)).ToList();
+                return conn.Table<Location>().Where(x => location.Contains(x.LocationName)).OrderBy(x => x.LocationName).ToList();
             }
         }
 

@@ -35,7 +35,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<DragonShout>().ToList();
+                return conn.Table<DragonShout>().OrderBy(x => x.Shout).ToList();
             }
         }
 
@@ -43,7 +43,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                var table = conn.Table<DragonShout>().ToList();
+                var table = conn.Table<DragonShout>().OrderBy(x => x.Shout).ToList();
                 var shoutTypes = new List<string>();
                 foreach (var shout in table)
                 {
@@ -60,7 +60,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<DragonShout>().Where(x => x.Shout == shoutType).ToList();
+                return conn.Table<DragonShout>().Where(x => x.Shout == shoutType).OrderBy(x => x.WordOfPower).ToList();
             }
         }
 

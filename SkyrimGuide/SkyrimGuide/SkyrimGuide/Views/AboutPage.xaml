@@ -31,20 +31,153 @@
                 </ContentView>
             </StackLayout>
         </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" BackgroundColor="{StaticResource Accent}" Padding="30,24,30,24" Spacing="10">
-                <Label TextColor="{StaticResource PrimaryText}">
+        <StackLayout Grid.Row="1" Orientation="Vertical" BackgroundColor="{StaticResource Accent}" Padding="30,24,30,24" Spacing="10">
+            <Grid VerticalOptions="FillAndExpand">
+                <Label HorizontalTextAlignment="Center" FontSize="25" Grid.Row="0"  Grid.ColumnSpan="2" TextColor="{StaticResource PrimaryText}" >
                     <Label.FormattedText>
                         <FormattedString>
-                            <Span Text="Abilities:"/>
+                            <Span Text="{Binding TotalPercent}"></Span>
+                            <Span Text="%"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>    
+                </Label>
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="1"  Grid.Column="0" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Abilities: "/>
                             <Span Text="{Binding AbilitiesComplete}"/>
                             <Span Text="/"/>
                             <Span Text="{Binding AbilitiesTotal}"/>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-            </StackLayout>
-        </ScrollView>
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Achievements: "/>
+                            <Span Text="{Binding AchievementsComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding AchievementsTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="2" Grid.Column="0" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Alchemy Effects: "/>
+                            <Span Text="{Binding AlchemyComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding AlchemyTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="2" Grid.Column="1" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Books: "/>
+                            <Span Text="{Binding BookComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding BookTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="3" Grid.Column="0" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Collectible Items: "/>
+                            <Span Text="{Binding ItemComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding ItemTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="3" Grid.Column="1" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Enchanting Effects: "/>
+                            <Span Text="{Binding EnchantingComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding EnchantingTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="4" Grid.Column="0" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Followers: "/>
+                            <Span Text="{Binding FollowerComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding FollowerTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="4" Grid.Column="1" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Locations: "/>
+                            <Span Text="{Binding LocationComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding LocationTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="5" Grid.Column="0" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Quests: "/>
+                            <Span Text="{Binding QuestComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding QuestTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="5" Grid.Column="1" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Shouts: "/>
+                            <Span Text="{Binding ShoutComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding ShoutTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="6" Grid.Column="0" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Spells: "/>
+                            <Span Text="{Binding SpellComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding SpellTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" FontSize="15" Grid.Row="6" Grid.Column="1" TextColor="{StaticResource PrimaryText}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Unique Gear: "/>
+                            <Span Text="{Binding GearComplete}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding GearTotal}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+        </StackLayout>
     </Grid>
 
 </ContentPage>

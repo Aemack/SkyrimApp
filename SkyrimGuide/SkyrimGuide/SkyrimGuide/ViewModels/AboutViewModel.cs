@@ -9,6 +9,7 @@ namespace SkyrimGuide.ViewModels
     public class AboutViewModel : BaseViewModel
     {
         #region
+        public double TotalPercent { get; set; }
         public int AbilitiesTotal { get; set; }
         public int AbilitiesComplete { get; set; }
 
@@ -51,7 +52,7 @@ namespace SkyrimGuide.ViewModels
 #endregion
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Home";
             SetAbilities();
             SetAchievements();
             SetAlchemy();
@@ -65,6 +66,10 @@ namespace SkyrimGuide.ViewModels
             SetShouts();
             SetSpells();
             SetGear();
+            var total = AbilitiesTotal + AchievementsTotal + AlchemyTotal + BookTotal + ItemTotal + EnchantingTotal + FollowerTotal + LocationTotal + MerchantTotal + QuestTotal + ShoutTotal + SpellTotal + GearTotal;
+
+            var complete = AbilitiesComplete + AchievementsComplete + AlchemyComplete + BookComplete + ItemComplete + EnchantingComplete + FollowerComplete + LocationComplete + MerchantComplete + QuestComplete + ShoutComplete + SpellComplete + GearComplete;
+            TotalPercent = Math.Round((complete / (double)total) * 100, 2);
         }
 
         private void SetGear()
@@ -90,7 +95,7 @@ namespace SkyrimGuide.ViewModels
 
         private void SetQuests()
         {
-            var qs = new AbilitiesService();
+            var qs = new QuestsService();
             QuestTotal = qs.GetTotal();
             QuestComplete = qs.GetNumberOfComplete();
         }

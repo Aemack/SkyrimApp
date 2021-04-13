@@ -77,51 +77,48 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="About" Icon="icon_about.png">
+    <FlyoutItem Title="Home" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    
 
 
-    <FlyoutItem Title="Merchants" Icon="icon_feed.png">
-        <ShellContent Route="MerchantTypesPage" ContentTemplate="{DataTemplate local:MerchantTypesPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Spells" Icon="icon_feed.png">
-        <ShellContent Route="SpellSchoolsPage" ContentTemplate="{DataTemplate local:SpellSchoolsPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Quests" Icon="icon_feed.png">
-        <ShellContent Route="QuestClassesPage" ContentTemplate="{DataTemplate local:QuestClassesPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Abilities" Icon="icon_feed.png">
+    <FlyoutItem Title="Abilities" Icon="ball.png">
         <ShellContent Route="AbilityTypesPage" ContentTemplate="{DataTemplate local:AbilityTypesPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Books" Icon="icon_feed.png">
-        <ShellContent Route="BookTypesPage" ContentTemplate="{DataTemplate local:BookTypesPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Locations" Icon="icon_feed.png">
-        <ShellContent Route="LocationRegionsPage" ContentTemplate="{DataTemplate local:LocationRegionsPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Shouts" Icon="icon_feed.png">
-        <ShellContent Route="ShoutTypesPage" ContentTemplate="{DataTemplate local:ShoutTypesPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Collectible Items" Icon="icon_feed.png">
-        <ShellContent Route="CollectibleItemTypesPage" ContentTemplate="{DataTemplate local:CollectibleItemTypesPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Achievements" Icon="icon_feed.png">
+    <FlyoutItem Title="Achievements" Icon="glare.png">
         <ShellContent Route="AchievementsPage" ContentTemplate="{DataTemplate local:AchievementsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Alchemy Effects" Icon="icon_feed.png">
+    <FlyoutItem Title="Alchemy Effects" Icon="potion.png">
         <ShellContent Route="AlchemyEffectsTypesPage" ContentTemplate="{DataTemplate local:AlchemyEffectsTypesPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Unique Gear" Icon="icon_feed.png">
-        <ShellContent Route="UniqueGearTypesPage" ContentTemplate="{DataTemplate local:UniqueGearTypesPage}" />
+    <FlyoutItem Title="Books" Icon="book.png">
+        <ShellContent Route="BookTypesPage" ContentTemplate="{DataTemplate local:BookTypesPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Enchanting Effects" Icon="icon_feed.png">
+    <FlyoutItem Title="Collectible Items" Icon="ruby.png">
+        <ShellContent Route="CollectibleItemTypesPage" ContentTemplate="{DataTemplate local:CollectibleItemTypesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Enchanting Effects" Icon="staff.png">
         <ShellContent Route="EnchantingEffectsPage" ContentTemplate="{DataTemplate local:EnchantingEffectsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Followers" Icon="icon_feed.png">
+    <FlyoutItem Title="Followers" Icon="magician.png">
         <ShellContent Route="FollowersPage" ContentTemplate="{DataTemplate local:FollowersPage}" />
     </FlyoutItem>
-
-
+    <FlyoutItem Title="Locations" Icon="magicball.png">
+        <ShellContent Route="LocationRegionsPage" ContentTemplate="{DataTemplate local:LocationRegionsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Merchants" Icon="coin.png">
+        <ShellContent Route="MerchantTypesPage" ContentTemplate="{DataTemplate local:MerchantTypesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Quests" Icon="eye.png">
+        <ShellContent Route="QuestClassesPage" ContentTemplate="{DataTemplate local:QuestClassesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Shouts" Icon="pentacle.png">
+        <ShellContent Route="ShoutTypesPage" ContentTemplate="{DataTemplate local:ShoutTypesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Spells" Icon="magichat.png">
+        <ShellContent Route="SpellSchoolsPage" ContentTemplate="{DataTemplate local:SpellSchoolsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Unique Gear" Icon="hypnotic.png">
+        <ShellContent Route="UniqueGearTypesPage" ContentTemplate="{DataTemplate local:UniqueGearTypesPage}" />
+    </FlyoutItem>
 </Shell>

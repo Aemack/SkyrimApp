@@ -10,6 +10,7 @@ namespace SkyrimGuide.Services
 
         public List<MapRow> SetUpMap(Location location)
         {
+            if (location == null) location = new Location();
             List<MapRow> mapRows = new List<MapRow>();
             var count = 0;
             var imageString = GetMapImageFromCoord(location.Coordinates.Replace("[", "").Replace("]", ""));

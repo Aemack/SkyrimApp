@@ -35,7 +35,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Location>().ToList();
+                return conn.Table<Location>().OrderBy(x => x.LocationName).ToList();
             }
         }
 
@@ -43,7 +43,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Location>().Where(x => x.Region == region).ToList();
+                return conn.Table<Location>().Where(x => x.Region == region).OrderBy(x => x.LocationName).ToList();
             }
         }
 
@@ -51,7 +51,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Location>().Where(x => x.Coordinates == location.Coordinates).ToList();
+                return conn.Table<Location>().Where(x => x.Coordinates == location.Coordinates).OrderBy(x => x.LocationName).ToList();
             }
         }
 
@@ -61,7 +61,7 @@ namespace SkyrimGuide.Services
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 var subHeadings = new List<string>();
-                var table = conn.Table<Location>().ToList();
+                var table = conn.Table<Location>().OrderBy(x => x.Region).ToList();
                 foreach (var row in table)
                 {
                     if (!subHeadings.Contains(row.Region))

@@ -35,7 +35,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Merchant>().ToList();
+                return conn.Table<Merchant>().OrderBy(x => x.Name).ToList();
             }
         }
 
@@ -43,7 +43,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                var table = conn.Table<Merchant>().ToList();
+                var table = conn.Table<Merchant>().OrderBy(x => x.Merchandise).ToList();
                 var merchantTypes = new List<string>();
                 foreach (var merchant in table)
                 {
@@ -60,7 +60,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Merchant>().Where(x => x.Merchandise == merchantType).ToList();
+                return conn.Table<Merchant>().Where(x => x.Merchandise == merchantType).OrderBy(x => x.Name).ToList();
             }
         }
 

@@ -28,7 +28,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Achievement>().ToList();
+                return conn.Table<Achievement>().OrderBy(x => x.Name).ToList();
             }
         }
 

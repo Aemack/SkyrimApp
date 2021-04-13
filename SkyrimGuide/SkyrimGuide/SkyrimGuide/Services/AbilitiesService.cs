@@ -30,7 +30,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Ability>().ToList();
+                return conn.Table<Ability>().OrderBy(x => x.Name).ToList();
             }
         }
 
@@ -46,7 +46,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Ability>().Where(x => x.Type == type).ToList();
+                return conn.Table<Ability>().Where(x => x.Type == type).OrderBy(x => x.Name).ToList();
             }
         }
 
@@ -55,7 +55,7 @@ namespace SkyrimGuide.Services
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 var subHeadings = new List<string>();
-                var table = conn.Table<Ability>().ToList();
+                var table = conn.Table<Ability>().OrderBy(x => x.Type).ToList();
                 foreach (var row in table)
                 {
                     if (!subHeadings.Contains(row.Type))

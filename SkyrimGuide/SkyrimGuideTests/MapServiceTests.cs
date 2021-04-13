@@ -38,5 +38,7 @@ namespace SkyrimGuideTests
             var result = _sut.GetMapImageFromCoord(coordinates);
             Assert.That(result, Is.EqualTo(imageString));
         }
+
+
     }
 }

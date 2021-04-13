@@ -35,7 +35,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Spell>().ToList();
+                return conn.Table<Spell>().OrderBy(x => x.Name).ToList();
             }
         }
 
@@ -43,7 +43,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                var table = conn.Table<Spell>().ToList();
+                var table = conn.Table<Spell>().OrderBy(x => x.School).ToList();
                 var spellTypes = new List<string>();
                 foreach (var spell in table)
                 {
@@ -60,7 +60,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Spell>().Where(x => x.School == spellType).ToList();
+                return conn.Table<Spell>().Where(x => x.School == spellType).OrderBy(x => x.Name).ToList();
             }
         }
 

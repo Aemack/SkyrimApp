@@ -35,7 +35,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<Follower>().ToList();
+                return conn.Table<Follower>().OrderBy(x => x.Name).ToList();
             }
         }
 

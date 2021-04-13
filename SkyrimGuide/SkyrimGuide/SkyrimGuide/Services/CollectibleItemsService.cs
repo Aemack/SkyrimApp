@@ -28,7 +28,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<CollectibleItem>().ToList();
+                return conn.Table<CollectibleItem>().OrderBy(x => x.ItemName).ToList();
             }
         }
 
@@ -44,7 +44,7 @@ namespace SkyrimGuide.Services
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
-                return conn.Table<CollectibleItem>().Where(x => x.Type == type).ToList();
+                return conn.Table<CollectibleItem>().Where(x => x.Type == type).OrderBy(x => x.ItemName).ToList();
             }
         }
 
@@ -53,7 +53,7 @@ namespace SkyrimGuide.Services
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 var subHeadings = new List<string>();
-                var table = conn.Table<CollectibleItem>().ToList();
+                var table = conn.Table<CollectibleItem>().OrderBy(x => x.Type).ToList();
                 foreach (var row in table)
                 {
                     if (!subHeadings.Contains(row.Type))
